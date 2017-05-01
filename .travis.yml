@@ -1,3 +1,4 @@
 language: python
 version:
     - 2.7
+script: python simplePythonScript.py
