@@ -1,3 +1,5 @@
+import numpy
+
 def main():
     print("Hello world!")
     return 1
