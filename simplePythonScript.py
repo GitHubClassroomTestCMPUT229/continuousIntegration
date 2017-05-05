@@ -2,6 +2,34 @@ import spimgrader
 import subprocess
 import os
 
+# https://docs.python.org/2/library/email-examples.html
+import smtplib                              # Import smtplib for the actual sending function
+from email.mime.text import MIMEText        # Import the email modules we'll need
+
+# https://docs.python.org/2/library/email-examples.html
+def email(f):
+    me ="hoye@ualberta.ca"
+    you = "hoye@ualberta.ca"
+
+    # Open a plain text file for reading.  For this example, assume that
+    # the text file contains only ASCII characters.
+    fp = open(f, 'rb')
+    # Create a text/plain message
+    msg = MIMEText(fp.read())
+    fp.close()
+
+    # me == the sender's email address
+    # you == the recipient's email address
+    msg['Subject'] = 'The contents of %s' % f
+    msg['From'] = me
+    msg['To'] = you
+
+    # Send the message via our own SMTP server, but don't include the
+    # envelope header.
+    s = smtplib.SMTP('localhost')
+    s.sendmail(me, [you], msg.as_string())
+    s.quit()
+
 def main():
     # Call spimgrader to apply files to student submissions
     spimgrader.main()
@@ -12,7 +40,9 @@ def main():
     # eg: Send the results to the teaching team
     files = os.listdir("./results")
     for f in files:
-        f = open("./results/" + f, "r")
+        fname = "./results/" + f
+        f = open(fname, "r")
+        email(fname)
         print(f.read())
 
 if __name__ == "__main__":
