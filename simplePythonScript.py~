@@ -42,7 +42,7 @@ def main():
     for f in files:
         fname = "./results/" + f
         f = open(fname, "r")
-        email(fname)
+        # email(fname)              # Would be handy to have email notifications sent; currently works from local, but error within Travis
         print(f.read())
 
 if __name__ == "__main__":

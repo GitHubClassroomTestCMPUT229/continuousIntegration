@@ -26,7 +26,7 @@ def email(f):
 
     # Send the message via our own SMTP server, but don't include the
     # envelope header.
-    s = smtplib.SMTP('0.0.0.0')
+    s = smtplib.SMTP('localhost')
     s.sendmail(me, [you], msg.as_string())
     s.quit()
 
@@ -42,7 +42,8 @@ def main():
     for f in files:
         fname = "./results/" + f
         f = open(fname, "r")
-        email(fname)
+        # email(fname)              # Would be handy to have email notifications sent; currently works from local, but error within Travis
+                                    # We need to encrypt credentials, maybe.  
         print(f.read())
 
 if __name__ == "__main__":
