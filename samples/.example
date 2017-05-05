@@ -1,0 +1,9 @@
+This is the folder that stores all sample test files.
+Sample test files should be inputs separated by newlines (not just the string '\n'). 
+It doesn't hurt to pad newlines at the end of a file, but having too few will cause the process to hang. 
+(A hanging script will be detected in a few seconds and aborted/reported as such.)
+
+Example:
+This is an input string to search for a query.
+query
+
