@@ -1,8 +1,8 @@
-# import elasticsearch
+import spimgrader
+import subprocess
 
 def main():
-    print("Hello world!")
-    return 1
+    subprocess.call("spim")
 
 if __name__ == "__main__":
     main()
