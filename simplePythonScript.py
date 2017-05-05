@@ -2,7 +2,7 @@ import spimgrader
 import subprocess
 
 def main():
-    subprocess.call(["spim"])
+    spimgrader.main()
 
 if __name__ == "__main__":
     main()
