@@ -1,8 +1,13 @@
 import spimgrader
 import subprocess
+import os
 
 def main():
-    subprocess.call(["spim"])
+    spimgrader.main()
+    files = os.listdir("./results")
+    for f in files:
+        f = open("./results/" + f, "r")
+        print(f.read())
 
 if __name__ == "__main__":
     main()
