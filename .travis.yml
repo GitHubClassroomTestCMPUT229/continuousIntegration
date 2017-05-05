@@ -1,5 +1,5 @@
 language: python
 version:
     - 2.7
-install: apt-get install spim
+apt addons: apt-get install spim
 script: python simplePythonScript.py
