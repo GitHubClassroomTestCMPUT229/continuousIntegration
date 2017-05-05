@@ -1,0 +1,5 @@
+The folder holding student submissions of the homework. 
+Submissions must be in a format readable by spim.
+Script will try to parse filenames for rcs ids; it looks for names of the pattern:
+xxx_RCS_attempt_xxx...
+It prepends this to the test name to generate the output filename.
