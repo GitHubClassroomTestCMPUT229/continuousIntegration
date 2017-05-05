@@ -1,4 +1,4 @@
-import numpy
+import elasticsearch
 
 def main():
     print("Hello world!")

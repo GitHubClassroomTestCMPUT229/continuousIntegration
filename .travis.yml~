@@ -1,5 +1,5 @@
 language: python
 version:
     - 2.7
-install: 
+install: pip install elasticsearch
 script: python simplePythonScript.py
