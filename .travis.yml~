@@ -2,5 +2,5 @@ language: python
 version:
     - 2.7
 before_install: 
-    - apt-get install spim
+    - sudo apt-get install spim
 script: python spimgrader.py
