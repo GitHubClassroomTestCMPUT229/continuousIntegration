@@ -7,6 +7,7 @@ Writes to 'results' folder.
 import os, time, re
 from subprocess import Popen, PIPE, STDOUT
 
+
 def run(fn, sample_input='\n'):
     #start process and write input
     proc = Popen(["spim"])
