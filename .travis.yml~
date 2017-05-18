@@ -2,4 +2,4 @@ language: python
 version:
     - 2.7
 apt addons: apt-get install spim
-script: python spimgrader.py
+script: python spim-grader.py
