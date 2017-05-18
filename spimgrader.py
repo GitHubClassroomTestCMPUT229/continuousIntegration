@@ -7,11 +7,8 @@ Writes to 'results' folder.
 import os, time, re
 from subprocess import Popen, PIPE, STDOUT
 
-
 def run(fn, sample_input='\n'):
     #start process and write input
-    proc = Popen(["spim"])
-    proc.kill()
     proc = Popen(["spim", "-file", "submissions/"+fn], stdin=PIPE, stdout=PIPE, stderr=PIPE)
     if sample_input[-1:] != '\n':
         print "Warning: last line (of file below) must end with newline char to be submitted. Assuming it should..."
@@ -84,6 +81,11 @@ def main():
             p = run(submission, sample_input)
             output_file = generate_filename(submission, sample)
             grade(p, output_file)
+
+            f = open(output_file)
+            print f,read()
+            f.close()
+
     print("SUCCESS!")
 
 if __name__ == "__main__":
