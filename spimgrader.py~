@@ -81,6 +81,11 @@ def main():
             p = run(submission, sample_input)
             output_file = generate_filename(submission, sample)
             grade(p, output_file)
+
+            f = open(output_file. "r")
+            print f,read()
+            f.close()
+
     print("SUCCESS!")
 
 if __name__ == "__main__":
