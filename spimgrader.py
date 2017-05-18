@@ -61,7 +61,6 @@ def generate_filename(submission, sample):
 
 def main():
     print "HERE!"
-    return
     #no use in running if content directories aren't present
     assert os.path.isdir("samples")
     assert os.path.isdir("submissions")
