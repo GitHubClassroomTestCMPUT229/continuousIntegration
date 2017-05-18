@@ -1,6 +1,9 @@
 language: python
 version:
     - 2.7
+notifications:
+    email:
+        - hoye@ualberta.ca
 before_install: 
     - sudo apt-get install spim
 script: python spim-grader.py

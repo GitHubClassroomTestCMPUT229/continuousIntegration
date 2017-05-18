@@ -3,4 +3,4 @@ version:
     - 2.7
 before_install: 
     - sudo apt-get install spim
-script: python spimgrader.py
+script: python spim-grader.py
