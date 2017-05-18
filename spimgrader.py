@@ -1,4 +1,3 @@
-#!/usr/bin/python
 '''
 SPIM Auto-grader
 Owen Stenson
