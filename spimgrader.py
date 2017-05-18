@@ -9,6 +9,8 @@ from subprocess import Popen, PIPE, STDOUT
 
 def run(fn, sample_input='\n'):
     #start process and write input
+    proc = Popen(["spim"])
+    proc.kill()
     proc = Popen(["spim", "-file", "submissions/"+fn], stdin=PIPE, stdout=PIPE, stderr=PIPE)
     if sample_input[-1:] != '\n':
         print "Warning: last line (of file below) must end with newline char to be submitted. Assuming it should..."
