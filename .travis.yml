@@ -3,8 +3,6 @@ version:
     - 2.7
 notifications:
     email:
-        recipients:
-            - hoye@ualberta.ca
         on_success: always
         on_failure: always
 before_install: 
